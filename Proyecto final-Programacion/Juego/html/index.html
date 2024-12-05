@@ -1,0 +1,79 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juegos de Números</title>
+  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  
+  <h1>¡Adivina el numero!</h1>
+
+  <div class="container">
+    <h2>Establecer Rango de Números</h2>
+    <div class="buttons">
+      <input type="number" class="entrada" id="start" placeholder="Inicio">
+      <span class="sep">y</span>
+      <input type="number" class="entrada" id="end" placeholder="Fin">
+      <input type="button" class="btnSubmit" value="Generar Número Aleatorio" onclick="setRandomNumber()">
+    </div>
+    <p id="rangeMessage"></p>
+  </div>
+
+  <p>Hemos seleccionado un número aleatorio entre el rango que elegiste. Fíjate si lo puedes adivinar en 10 turnos o menos. Vamos a decirte si tu número es más alto o más bajo.</p>
+  <div class="form">
+    <label for="guessField">Adivina el número: </label>
+    <br>
+    <br>
+    <input type="text" id="guessField" class="guessField" disabled />
+    <br>
+    <br>
+    <input type="submit" value="Enviar respuesta" class="guessSubmit" disabled />
+  </div>
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
+
+  <button class="floating-button"><i class="fa-solid fa-gear"></i></button>
+
+  <audio id="successSound" src="../Sounds/gano.mp3"></audio>
+  <audio id="failSound" src="../Sounds/error.mp3"></audio>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="../Sounds/sound.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <section class="modal">
+    <div class="modal__container">
+      <div class="wrapper">
+        <i class="uil uil-volume-mute" id="icon"></i>
+        <input type="range" min="0" step="1" max="100" value="0" id="un-input">
+        <span class="slide-value">0</span>
+      </div>
+      <a href="#" class="modal__close">Aceptar</a>
+    </div>
+  </section>
+
+  <script src="../Js/main.js"></script>
+
+ 
+ <!-- hola -->
+  <a href="../inicio.html"><button onclick="goBack()" class="btnBack">
+    <i class="fa-solid fa-house"></i>
+  </button></a>
+ 
+
+<script>
+  function goBack() {
+    window.location.href = "http://127.0.0.1:5501/Juego%20(2)/Juego/inicio.html"; 
+  }
+</script>
+
+</body>
+</html>

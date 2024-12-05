@@ -1,0 +1,237 @@
+html {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  margin-top: -100px;
+  background-color: #cfdcf0; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 150px 150px; 
+  background-repeat: repeat; 
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  /**/
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*---------------------------------------------------------modal----------------------------------------------------------------*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s;    
+}
+
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity .6s;
+  --transform: translateY(0);
+  --transition: transform .8s .8s;  
+}
+
+.modal__container {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+.modal__title{
+  font-size: 2.5em;
+}
+
+.modal__img{
+  width: 90%;
+  max-width: 250px;
+}
+.modal__paragraph{
+  margin-bottom: 10px;
+}
+.modal__close{
+  text-decoration: none;
+  color: #fff;
+  background-color: #F26250;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color .3s;
+
+}
+
+.modal__close:hover{
+  color: #F26250;
+  background-color: #fff;
+}
+
+
+.play-button {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    color: #000000; 
+}
+
+h1 {
+  color: black;
+  margin-top: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  /* z-index: 9999; */
+}
+
+
+.fa-solid {
+    font-size: 48px;
+    transition: transform 0.3s ease; 
+}
+
+.floating-button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #91bee7;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(219, 253, 255);
+  cursor: pointer;
+}
+
+.floating-button i {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.floating-button:hover{
+  background-color: #5c97d6;
+}
+
+.play-button {
+    display: inline-block; 
+    margin-top: 20px; 
+}
+
+.play-button:hover .fa-solid {
+    transform: scale(1.2); 
+    color: #1e1d1f
+}
+
+/*-------------------------------------------------------fondo-------------------------------------------------------------*/
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #4690c2;
+  }
+  
+  .small {
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+  }
+  
+  .medium {
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+  }
+  
+  .shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }

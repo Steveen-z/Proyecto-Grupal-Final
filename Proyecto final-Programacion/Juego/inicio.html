@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/inicio.css">
+    <link rel="stylesheet" href="./Js/inicio.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>¡Adivina el numero!</h1>
+    <a href="./html/index.html" class="play-button"><i class="fa-solid fa-play"></i></a>
+
+    <div class='ripple-background'>
+        <div class='circle xxlarge shade1'></div>
+        <div class='circle xlarge shade2'></div>
+        <div class='circle large shade3'></div>
+        <div class='circle mediun shade4'></div>
+        <div class='circle small shade5'></div>
+    </div>
+
+    <button class="floating-button"><i class="fa-solid fa-info"></i></button>
+
+
+</body>
+
+<section class="modal">
+    <div class="modal__container">
+        <img src="./Images/info pixel.svg" class="modal__img">
+        <h2 class="modal__title">Instrucciones</h2>
+        <p class="modal__paragraph">Primero debes de establecer un rango de numeros entre los cuales deseas adivinar el numero aleatorio, el juego te indicara si el numero que has ingresado es mayor o menor hasta llegar al correcto, luego de establecer el rango haz clic en "generar numero aleatorio" y empieza a divertirte!!!</p>
+            <a href="#" class="modal__close">Aceptar</a>
+    </div>
+</section>
+<script src="./Js/inicio.js"></script>
+</html>
