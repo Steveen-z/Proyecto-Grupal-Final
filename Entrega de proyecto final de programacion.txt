@@ -1,0 +1,14 @@
+Proyecto final: Adivina el número
+
+
+integrantes:
+• Steveen Antonio Portillo Gómez
+• Yordin Omar Ramírez Martínez
+• Elvin Elisander Rivera Sorto
+• José Santos Aguilar de la Cruz
+
+Ejemplo: https://www.mathsisfun.com/games/guess_number.html
+
+Entrega: https://github.com/Steveen-z/Proyecto-Grupal-Final.git
+
+Notas: José Santos Aguilar de la Cruz tuvo solamente una intervención en todo el proyecto. Previo a la entrega mostro interés en el proyecto y se le asignó una tarea, se le dio el tiempo pertinente para que pudiera completarla (una semana) al cavo del tiempo se le solicitó la parte que se le asigno y su respuesta de forma  textual fue "Hola fíjate que no pude" por lo que tuvo un aporte mínimo en el desarrollo del proyecto. 
